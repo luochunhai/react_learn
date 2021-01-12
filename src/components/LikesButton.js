@@ -13,6 +13,7 @@ class LikesButton extends React.Component {
 
     increaseLikes() {
         this.setState({
+            // eslint-disable-next-line
             likes: ++this.state.likes
         })
     }
