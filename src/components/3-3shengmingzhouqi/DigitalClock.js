@@ -20,7 +20,7 @@ class DigitalClock extends React.Component {
 
     //更新
     componentDidUpdate(currentProps, currentState) {
-        console.log(currentState)
+        // console.log(currentState)
     }
 
     //卸载
@@ -31,6 +31,7 @@ class DigitalClock extends React.Component {
     render() {
         return (
             <div className="digital-clock-components jumbotron">
+                <h2>3-3 React 生命周期</h2>
                 <h1 style={{color: "#000"}}>{this.state.date.toLocaleTimeString()}</h1>
             </div>
         )

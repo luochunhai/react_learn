@@ -21,6 +21,7 @@ class LikesButton extends React.Component {
     render() {
         return (
             <div className="likes-button-component">
+                <h2>3-2 state</h2>
                 <button
                     type="button"
                     className="btn btn-outline-primary btn-lg"

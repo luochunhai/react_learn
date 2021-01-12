@@ -1,9 +1,10 @@
 import React from 'react'
 
 const NameCard = (props) => {
-    const {name, number, isHuman, tags} = props
+    const {name, number, isHuman, tags} = props;
     return (
         <div className="alert alter-success">
+            <h2>3-1 props</h2>
             <h4 className="alert-heading">{name}</h4>
             <ul>
                 <li>
@@ -22,5 +23,7 @@ const NameCard = (props) => {
         </div>
     )
 }
+
+
 
 export default NameCard
