@@ -1,14 +1,8 @@
 import './App.css';
 import React, {Component} from "react"
-import DigitalClock from "./components/3-3shengmingzhouqi/DigitalClock";
-import NameCard from "./components/3-1props/NameCard";
-import LikesButton from "./components/3-2state/LikesButton";
-import GuestBook from "./components/4-1liuyanben/GuestBook";
-import Context from "./components/5 context/Context";
-
-
-const tags = ['恐龙', '足球小子']
-
+import Demo from "./components/mooc_1045/Demo";
+import {BrowserRouter, Link, Route} from 'react-router-dom';
+import SimpleSAP from "./components/mooc_791/SimpleSAP";
 
 class App extends Component {
     // eslint-disable-next-line
@@ -18,17 +12,19 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
-                <NameCard name="viking" number={1234567890} tags={tags}/>
-                ------------
-                <LikesButton/>
-                ------------
-                <DigitalClock/>
-                ------------
-                <GuestBook/>
-                ------------
-                <Context/>
-            </div>
+            <BrowserRouter>
+                <div className="App">
+                    <div className="navigation">
+                        <Link to={{pathname: '/react16',}}><p>基于实例的 React16 傻瓜课程</p></Link>
+                        <Link to={{pathname: '/simple-sap',}}><p>React知识点综合运用实例</p></Link>
+                    </div>
+
+                    <Route path="/react16" exact component={Demo}></Route>
+                    <Route path="/simple-sap" exact component={SimpleSAP}></Route>
+
+                </div>
+            </BrowserRouter>
+
 
         );
     }
