@@ -15,12 +15,12 @@ class App extends Component {
             <BrowserRouter>
                 <div className="App">
                     <div className="navigation">
-                        <Link to={{pathname: '/react16',}}><p>基于实例的 React16 傻瓜课程</p></Link>
-                        <Link to={{pathname: '/simple-sap',}}><p>React知识点综合运用实例</p></Link>
+                        <p><Link to={{pathname: '/react16',}}>基于实例的 React16 傻瓜课程</Link></p>
+                        <p><Link to={{pathname: '/simple-sap',}}>React Router</Link></p>
                     </div>
 
-                    <Route path="/react16" exact component={Demo}></Route>
-                    <Route path="/simple-sap" exact component={SimpleSAP}></Route>
+                    <Route path="/react16" exact component={Demo}/>
+                    <Route path="/simple-sap" exact component={SimpleSAP}/>
 
                 </div>
             </BrowserRouter>
